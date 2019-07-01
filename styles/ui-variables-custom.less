@@ -1,5 +1,27 @@
-
+//
 // Custom variables
+//
 // These variables are only used in this theme
+//
 
-@background-color-primary:    mix(@black, @cyan, 25%);
+@ui-theme-name: base16-tomorrow-dark-ui;
+
+// Text (Custom) -----------------
+@text-color-faded: fade(@text-color, 20%);
+
+@text-color-added:    @text-color-success;  // green
+@text-color-ignored:  @text-color-subtle;   // faded
+@text-color-modified: @text-color-warning;  // orange
+@text-color-removed:  @text-color-error;    // red
+@text-color-renamed:  @text-color-info;     // blue
+
+// Background (custom)
+@background-color-primary: @accent-bg-color;
+
+// Accent (custom)
+@accent-color: @cyan;
+@accent-bg-color: mix(@black, @cyan, 25%);
+
+// Components (custom)
+@scrollbar-color:                   @button-background-color;
+@scrollbar-background-color:        @app-background-color;
