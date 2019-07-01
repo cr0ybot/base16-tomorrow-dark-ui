@@ -1,4 +1,4 @@
-# Atom UI Theme Template
+# Atom Base16 Tomorrow Dark UI Theme
 
 This is a __starter template__ for creating an Atom UI theme.
 
