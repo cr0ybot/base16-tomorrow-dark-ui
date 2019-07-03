@@ -15,20 +15,20 @@
 
 // Text Colors
 @text-color:           @light-gray;
-@text-color-subtle:    darken(@text-color, 50%);
+@text-color-subtle:    @text-color-faded;
 @text-color-highlight: @very-light-gray;
 @text-color-selected:  @almost-white;
 
-@text-color-info:    @blue;
-@text-color-success: @green;
-@text-color-warning: @yellow;
-@text-color-error:   @red;
+@text-color-info:    @color-info;
+@text-color-success: @color-success;
+@text-color-warning: @color-warning;
+@text-color-error:   @color-error;
 
 // Background colors
-@background-color-info:    mix(@black, @blue, 25%);
-@background-color-success: mix(@black, @green, 25%);
-@background-color-warning: mix(@black, @yellow, 25%);
-@background-color-error:   mix(@black, @red, 25%);
+@background-color-info:    darken(@color-info, 25%);
+@background-color-success: darken(@color-success, 25%);
+@background-color-warning: darken(@color-warning, 25%);
+@background-color-error:   darken(@color-error, 25%);
 
 @background-color-highlight: lighten(@base-background-color, 5%);
 @background-color-selected:  lighten(@base-background-color, 10%);

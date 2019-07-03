@@ -6,7 +6,22 @@
 
 @ui-theme-name: base16-tomorrow-dark-ui;
 
-// Text (Custom) -----------------
+// Palette (custom)
+@color-info: @blue;
+@color-success: @green;
+@color-warning: @orange;
+@color-error: @red;
+
+@color-accent: @cyan;
+@color-mystery: @purple;
+@color-natural: @brown;
+
+@background-color-accent: darken(@color-accent, 25%);
+@background-color-mystery: darken(@color-mystery, 25%);
+@background-color-natural: darken(@color-natural, 25%);
+
+
+// Text (custom) -----------------
 @text-color-faded: fade(@text-color, 20%);
 
 @text-color-added:    @text-color-success;  // green
@@ -15,13 +30,16 @@
 @text-color-removed:  @text-color-error;    // red
 @text-color-renamed:  @text-color-info;     // blue
 
-// Background (custom)
-@background-color-primary: @accent-bg-color;
-
-// Accent (custom)
-@accent-color: @cyan;
-@accent-bg-color: mix(@black, @cyan, 25%);
 
 // Components (custom)
 @scrollbar-color:                   @button-background-color;
 @scrollbar-background-color:        @app-background-color;
+
+// Sizes (custom)
+@ui-size:                 1rem;
+@ui-input-size:           @ui-size*1.15;
+@ui-padding:              @ui-size*1.5;
+@ui-padding-pane:         @ui-size*.5;
+@ui-padding-icon:         @ui-padding/3.3;
+@ui-line-height:          @ui-size*2;
+@ui-tab-height:           @ui-size*2.5;
