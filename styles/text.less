@@ -1,9 +1,9 @@
-
+//
 // Text
-// -------------------
+//
 
 .text-smaller {
-  font-size: smaller;
+	font-size: smaller;
 }
 
 .text-subtle    { color: @text-color-subtle; }
@@ -15,7 +15,7 @@
 .text-error   { color: @text-color-error; }
 
 
-// Highlights ---------------
+// Highlights
 
 .highlight         { .highlight-mixin(@background-color-highlight); }
 .highlight-info    { .highlight-mixin(@background-color-info); }
@@ -24,17 +24,25 @@
 .highlight-success { .highlight-mixin(@background-color-success); }
 
 .highlight-mixin(@color) {
-  padding: 1px 4px;
-  color: @text-color-highlight;
-  border-radius: @component-border-radius;
-  background-color: @color;
+	padding: 1px 4px;
+	color: @text-color-highlight;
+	border-radius: @component-border-radius;
+	background-color: @color;
 }
 
 
-// Background Message ---------------
-// Shown when no tabs are open.
+// Messages
 
+.error-message {
+	color: @text-color-error;
+}
+
+.loading-message {
+	color: @text-color-mystery;
+}
+
+// Shown when no tabs are open.
 .background-message {
-  font-weight: bold;
-  color: @text-color-subtle;
+	font-weight: bold;
+	color: @text-color-faded;
 }

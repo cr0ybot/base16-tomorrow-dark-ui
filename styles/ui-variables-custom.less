@@ -6,6 +6,8 @@
 
 @ui-theme-name: base16-tomorrow-dark-ui;
 
+@background-darken: 15%;
+
 // Palette (custom)
 @color-info: @blue;
 @color-success: @green;
@@ -16,18 +18,18 @@
 @color-mystery: @purple;
 @color-natural: @brown;
 
-@background-color-accent: darken(@color-accent, 25%);
-@background-color-mystery: darken(@color-mystery, 25%);
-@background-color-natural: darken(@color-natural, 25%);
+@background-color-accent: darken(@color-accent, @background-darken);
+@background-color-mystery: darken(@color-mystery, @background-darken);
+@background-color-natural: darken(@color-natural, @background-darken);
 
 
 // Text (custom) -----------------
 @text-color-accent: @color-accent;
 @text-color-mystery: @color-mystery;
 @text-color-natural: @color-natural;
-@text-color-faded: fade(@text-color, 20%);
+@text-color-faded: fade(@text-color-mystery, 50%);
 @text-color-added:    @text-color-success;  // green
-@text-color-ignored:  @text-color-subtle;   // faded
+@text-color-ignored:  @text-color-faded;   // faded
 @text-color-modified: @text-color-warning;  // orange
 @text-color-removed:  @text-color-error;    // red
 @text-color-renamed:  @text-color-info;     // blue

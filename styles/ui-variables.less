@@ -1,21 +1,18 @@
-
+//
 // UI Variables
-// -------------------
-
+//
 // These are the official UI variables that every UI theme should define.
 // It allows other packages to match your theme.
-
+//
 // Overrides: atom/static/variables/ui-variables.less
-
-// Try to edit some of the values below to see your theme change.
-// A good start is to change the color of the `@base-background-color` variable.
+//
 
 @import "colors.less";
 @import "ui-variables-custom.less";
 
 // Text Colors
 @text-color:           @light-gray;
-@text-color-subtle:    @text-color-faded;
+@text-color-subtle:    fade(@text-color, @background-darken);
 @text-color-highlight: @white;
 @text-color-selected:  @almost-white;
 
@@ -25,10 +22,10 @@
 @text-color-error:   @color-error;
 
 // Background colors
-@background-color-info:    darken(@color-info, 25%);
-@background-color-success: darken(@color-success, 25%);
-@background-color-warning: darken(@color-warning, 25%);
-@background-color-error:   darken(@color-error, 25%);
+@background-color-info:    darken(@color-info, @background-darken);
+@background-color-success: darken(@color-success, @background-darken);
+@background-color-warning: darken(@color-warning, @background-darken);
+@background-color-error:   darken(@color-error, @background-darken);
 
 @background-color-highlight: lighten(@base-background-color, 5%);
 @background-color-selected:  lighten(@base-background-color, 10%);
@@ -78,7 +75,7 @@
 @ui-site-color-4: @purple; // pink
 @ui-site-color-5: @yellow; // yellow
 
-// Sizes
+// Sizes (use px, em/rem gets weird!)
 @font-size: 12px;
 @input-font-size: 14px;
 
@@ -93,4 +90,4 @@
 
 // Misc
 @component-border-radius: 0;
-@font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', 'Ubuntu', 'Cantarell', sans-serif;

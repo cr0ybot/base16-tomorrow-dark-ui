@@ -1,0 +1,79 @@
+//
+// Inputs
+//
+
+// Checkbox
+.input-checkbox {
+	&:active {
+		background-color: @color-accent;
+	}
+	&:before,
+	&:after {
+		background-color: @background-color-accent;
+	}
+	&:checked {
+		background-color: @color-accent;
+	}
+
+	&:indeterminate {
+		background-color: @color-accent;
+	}
+}
+
+// Radio
+.input-radio {
+	&:before {
+		background-color: @background-color-accent;
+	}
+	&:active {
+		background-color: @color-accent;
+	}
+	&:checked {
+		background-color: @color-accent;
+	}
+}
+
+// Range (slider)
+.input-range {
+	&::-webkit-slider-thumb {
+		background-color: @color-accent;
+	}
+}
+
+
+// Toggle
+.input-toggle {
+	&:checked {
+		background-color: @color-accent;
+	}
+	&:before {
+		background-color: @background-color-accent;
+	}
+}
+
+
+// States
+
+.input-text,
+.input-search,
+.input-number,
+.input-textarea,
+.input-select,
+.input-color {
+	&:focus {
+		outline: none;
+		border-color: @color-accent;
+		box-shadow: 0 0 0 1px @color-accent;
+	}
+}
+
+.input-text,
+.input-search,
+.input-number,
+.input-textarea {
+	&:invalid {
+		border-color: @text-color-error;
+		box-shadow: 0 0 0 1px @text-color-error;
+		background-color: mix(@text-color-error, @input-background-color, 10%);
+	}
+}
