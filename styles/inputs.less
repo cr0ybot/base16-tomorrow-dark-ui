@@ -61,9 +61,7 @@
 .input-select,
 .input-color {
 	&:focus {
-		outline: none;
-		border-color: @color-accent;
-		box-shadow: 0 0 0 1px @color-accent;
+		.focus();
 	}
 }
 
@@ -72,8 +70,6 @@
 .input-number,
 .input-textarea {
 	&:invalid {
-		border-color: @text-color-error;
-		box-shadow: 0 0 0 1px @text-color-error;
-		background-color: mix(@text-color-error, @input-background-color, 10%);
+		.invalid();
 	}
 }

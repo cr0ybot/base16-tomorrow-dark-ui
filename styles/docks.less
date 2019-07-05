@@ -32,6 +32,17 @@
 	border-left: 1px solid @base-border-color;
 }
 
+// Toggle buttons
+.atom-dock-toggle-button {
+
+	.atom-dock-toggle-button-inner {
+
+		&:hover {
+			color: @color-info;
+		}
+	}
+}
+
 // Make toggle buttons cover ^ border
 .atom-dock-toggle-button.left {
 	margin-left: -2px;
@@ -41,4 +52,14 @@
 }
 .atom-dock-inner:not(.atom-dock-open) .atom-dock-toggle-button.bottom {
 	margin-bottom: -1px;
+}
+
+// Open/close animation
+.atom-dock-mask {
+	transition: width 200ms, height 200ms;
+
+	// Remove transition when open, messes with manual resizing
+	.atom-dock-open & {
+		transition: none;
+	}
 }

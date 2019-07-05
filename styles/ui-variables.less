@@ -8,6 +8,7 @@
 //
 
 @import "colors.less";
+@import "ui-mixins.less";
 @import "ui-variables-custom.less";
 
 // Text Colors
@@ -29,7 +30,7 @@
 
 @background-color-highlight: lighten(@base-background-color, 5%);
 @background-color-selected:  lighten(@base-background-color, 10%);
-@app-background-color:       darken(@black, 5%);
+@app-background-color:       darken(@base-background-color, 5%);
 
 // Base colors
 @base-background-color: @black;
@@ -42,10 +43,10 @@
 @input-background-color: @app-background-color;
 @input-border-color:     @base-border-color;
 
-@tool-panel-background-color: @base-background-color;
+@tool-panel-background-color: @app-background-color;
 @tool-panel-border-color:     @base-border-color;
 
-@inset-panel-background-color: @dark-gray;
+@inset-panel-background-color: @very-dark-gray;
 @inset-panel-border-color:     @base-border-color;
 
 @panel-heading-background-color: @dark-gray;

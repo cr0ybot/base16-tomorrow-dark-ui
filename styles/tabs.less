@@ -139,6 +139,19 @@
 		&.active .title {
 			padding: 0;
 		}
+
+		// Tabs in the docks
+		atom-dock & {
+			max-width: none;
+
+			&.active {
+				background-color: @tool-panel-background-color;
+			}
+
+			&::before {
+				display: none;
+			}
+		}
 	}
 
 	// Dragging placeholder (dot)
