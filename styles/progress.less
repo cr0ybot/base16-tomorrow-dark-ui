@@ -1,9 +1,71 @@
 //
 // Progress
 //
-// The `progress` element is unstyled and defined by the OS.
-// See https://css-tricks.com/html5-progress-element/ in case you want to customize it.
-//
+
+// Progress bar
+// https://css-tricks.com/html5-progress-element/
+@progress-height: 8px;
+@progress-inner-height: 6px;
+@progress-background-color: @color-mystery;
+@progress-buffer-color: @progress-background-color;
+@progress-border-radius: @progress-height/2;
+@progress-inner-border-radius: @progress-inner-height/2;
+
+progress {
+	appearance: none;
+	-webkit-appearance: none;
+	height: @progress-height;
+	border-radius: @progress-border-radius;
+	background-color: @background-color-mystery;
+
+	&::-webkit-progress-bar {
+		background-color: transparent;
+		border-radius: @progress-border-radius;
+	}
+
+	&::-webkit-progress-value {
+		height: @progress-height;
+		border-radius: @progress-border-radius;
+		border: 2px solid @background-color-mystery;
+		background-color: @progress-background-color;
+	}
+
+	// Indeterminate progress bar
+	&:indeterminate {
+		background-image: radial-gradient(circle at center, @progress-buffer-color 33%, @progress-buffer-color 66%, transparent 66%);
+		background-size: @progress-inner-height @progress-inner-height;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+
+		animation-name: progress-cylon;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+		//animation-direction: alternate;
+		animation-timing-function: ease;
+
+		&::-webkit-progress-value {
+			display: none;
+		}
+	}
+
+	// Determinate progress bar
+	&[value] {
+
+	}
+}
+
+@keyframes progress-cylon {
+	0% {
+		background-position-x: 0%;
+	}
+	50% {
+		background-position-x: 100%
+	}
+	100% {
+		background-position-x: 0%;
+	}
+}
+
 
 // Spinner
 
