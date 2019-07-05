@@ -10,7 +10,7 @@
     "tomorrow",
     "dark"
   ],
-  "repository": "https://github.com/cr0ybot/base16-tomrrow-dark-ui",
+  "repository": "https://github.com/cr0ybot/base16-tomorrow-dark-ui",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
