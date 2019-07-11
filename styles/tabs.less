@@ -67,18 +67,6 @@
 			}
 		}
 
-		// Modified Icon (the circle)
-		&.modified:not(:hover) .close-icon {
-			top: 50%;
-			right: @component-padding + 4px; // 4px -> half of icon size
-			margin-top: -3px;
-			border-color: @text-color-modified;
-		}
-		&.modified:hover .close-icon {
-			color: currentColor;
-		}
-
-
 		// Close icon (the X)
 		.close-icon {
 			top: 0.5em;
@@ -94,6 +82,7 @@
 			overflow: hidden;
 			transform: scale(0);
 			transition: transform .08s;
+
 			&:hover {
 				cursor: pointer;
 				color: @text-color-highlight;
@@ -114,6 +103,19 @@
 		&:hover .close-icon {
 			transform: scale(1);
 			transition-duration: .16s;
+		}
+
+		// Modified Icon (the circle)
+		&.modified:not(:hover) .close-icon {
+			border-color: @text-color-modified;
+			transform: scale(1);
+		}
+		&.modified:hover .close-icon {
+			color: currentColor;
+
+			&:hover {
+				background-color: @background-color-warning;
+			}
 		}
 
 
